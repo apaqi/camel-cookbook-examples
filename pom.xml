@@ -54,7 +54,8 @@
   <properties>
     <application-name>Camel Cookbook Examples</application-name>
 
-    <camel-version>2.20.0-SNAPSHOT</camel-version>
+    <!--<camel-version>2.20.0-SNAPSHOT</camel-version>-->
+    <camel-version>2.20.0</camel-version>
 
     <activemq-version>5.14.5</activemq-version>
     <aries-blueprint-api-version>1.0.1</aries-blueprint-api-version>
@@ -593,7 +594,7 @@
         <version>2.1</version>
       </plugin>
 
-      <plugin>
+      <!--<plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
         <version>${maven-enforcer-plugin-version}</version>
@@ -616,7 +617,7 @@
             </goals>
           </execution>
         </executions>
-      </plugin>
+      </plugin>-->
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
