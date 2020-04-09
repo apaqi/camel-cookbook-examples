@@ -1,6 +1,9 @@
 Apache Camel Developer's Cookbook, 2nd Edition Samples
 ======================================================
-
+[路由介绍](https://camel.apache.org/components/latest/eips/enterprise-integration-patterns.html#top)
+=
+[camel in action](https://my.oschina.net/u/574870)
+=
 [![Build Status](https://travis-ci.org/CamelCookbook/camel-cookbook-examples.png?branch=master)](https://travis-ci.org/CamelCookbook/camel-cookbook-examples)
 [![Stories in Ready](https://badge.waffle.io/CamelCookbook/camel-cookbook-examples.png?label=ready&title=Ready)](https://waffle.io/CamelCookbook/camel-cookbook-examples?utm_source=badge)
 

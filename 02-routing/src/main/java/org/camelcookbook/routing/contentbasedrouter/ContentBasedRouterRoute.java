@@ -17,6 +17,8 @@
 
 package org.camelcookbook.routing.contentbasedrouter;
 
+import org.apache.camel.Exchange;
+import org.apache.camel.Processor;
 import org.apache.camel.builder.RouteBuilder;
 
 public class ContentBasedRouterRoute extends RouteBuilder {
@@ -26,11 +28,22 @@ public class ContentBasedRouterRoute extends RouteBuilder {
             .choice()
                 .when().simple("${body} contains 'Camel'")
                     .to("mock:camel")
+                    .process(new Processor() {
+                        @Override
+                        public void process(Exchange exchange) throws Exception {
+                            System.out.println("走到了when分支");
+                        }
+                    })
                     .log("Camel ${body}")
                 .otherwise()
                     .to("mock:other")
+                    .process((Exchange exchange)->{
+                        System.out.println("走到了otherwise分支");
+                    })
                     .log("Other ${body}")
             .end()
             .log("Message ${body}");
     }
+
+
 }

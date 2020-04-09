@@ -41,6 +41,27 @@ public class DirectSpringTest extends CamelSpringTestSupport {
         return new ClassPathXmlApplicationContext("META-INF/spring/direct-context.xml");
     }
 
+    /**
+     * <route>
+     *       <from uri="direct:A"/>
+     *       <transform>
+     *         <simple>A1[ ${body} ]</simple>
+     *       </transform>
+     *       <to uri="direct:B"/>
+     *       <transform>
+     *         <simple>A2[ ${body} ]</simple>
+     *       </transform>
+     *       <to uri="mock:endA"/>
+     *     </route>
+     *     <route>
+     *       <from uri="direct:B"/>
+     *       <transform>
+     *         <simple>B[ ${body} ]</simple>
+     *       </transform>
+     *       <to uri="mock:endB"/>
+     *     </route>
+     * @throws Exception
+     */
     @Test
     public void testInOutMessage() throws Exception {
         String message = "hello";
